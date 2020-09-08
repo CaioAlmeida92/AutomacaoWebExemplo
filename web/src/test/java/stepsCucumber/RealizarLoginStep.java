@@ -23,9 +23,14 @@ public class RealizarLoginStep {
 		realizarLoginActions.buscarProduto(produto);
 	}
 	
-	@Entao("clico no produto desejado")
+	@E("clico no produto desejado")
 	public void clicoEValidoOProdutoDesejado() throws InterruptedException {
 		realizarLoginActions.validaProdutoDesejado();
+	}
+	
+	@Entao("adiciono o produto no carrinho")
+	public void adiciono_produto_no_carrinho() throws InterruptedException {
+		realizarLoginActions.clicarAdicionarNoCarrinho();
 	}
 	
 }

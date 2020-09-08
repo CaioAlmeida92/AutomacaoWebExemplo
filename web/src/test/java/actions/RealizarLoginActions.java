@@ -36,5 +36,9 @@ public class RealizarLoginActions extends LoginPage {
 		getProdutoDesejado().click();
 	}
 	
+	public void clicarAdicionarNoCarrinho() throws InterruptedException {
+		getBotaoAdicionarAoCarrinho().click();
+	}
+	
 
 }

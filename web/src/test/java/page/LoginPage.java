@@ -17,6 +17,7 @@ public class LoginPage extends WebDriverFactory {
 	private WebElement campoDeBusca;
 	private WebElement botaoLupa;
 	private WebElement produtoDesejado;
+	private WebElement botaoAdicionarAoCarrinho;
 	
 	public LoginPage() {
 		this.driver = createDriver("https://www.amazon.com.br/");
@@ -38,6 +39,12 @@ public class LoginPage extends WebDriverFactory {
 	public WebElement getProdutoDesejado() {
 		produtoDesejado = driver.findElement(By.xpath("//span[contains(text(), 'HD Portátil Expansion 2Tb, Seagate, Stea2000400')]"));
 		return produtoDesejado;
+	}
+	
+	public WebElement getBotaoAdicionarAoCarrinho() {
+		botaoAdicionarAoCarrinho = driver.findElement(By.id("add-to-cart-button"));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("add-to-cart-button")));
+		return botaoAdicionarAoCarrinho;
 	}
 	
 	
